@@ -1,0 +1,33 @@
+.ChatForm{
+    margin-left:25%;
+    margin-right:25%;
+    text-align:center;
+    color:white;
+}
+.form-input{
+    margin-top:50px;
+    margin-bottom:50px;
+    background-color:#E89D9F;
+    color:white;
+    width:100%;
+    display:block;
+    height:40px;
+    font-weight:bold;
+    box-sizing:border-box;
+    border:0;
+    box-shadow:0 0 15px 4px #DF5F5B;
+}
+.form-input::placeholder {
+    padding-left: 10px;
+}
+.btn-submit{
+    font-weight:bold;
+    font-size:12pt;
+    color:white;
+    background-color:#E37775;
+    box-shadow:0 0 15px 4px #DF5F5B;
+    width:100%;
+    border:0;
+    height:40px;
+}
+
