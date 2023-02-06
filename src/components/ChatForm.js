@@ -9,7 +9,7 @@ export default function ChatForm(){
             </div>
             <form>
             <input className = "form-input" type="text" placeholder="Valentine's Name: (or let love lead the way and leave it blank ;))"></input>
-            <input className = "form-input" type="text" placeholder="Valentine's Name: (or let love lead the way and leave it blank ;))"></input>
+            <input className = "form-input" type="text" placeholder="Include things you want to tell your lover, keep it short and simple"></input>
             <button className = "btn-submit">Create my love poem</button>
             </form>
         </div>

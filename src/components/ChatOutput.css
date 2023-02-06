@@ -1,0 +1,11 @@
+.ChatOutput{
+    height:20%;
+    background-color: #DF5F5B;
+    margin-left:25%;
+    margin-right:25%;
+    margin-top:50px;
+    border-radius:10px;
+    color:black;
+    padding-bottom:100px;
+}
+
