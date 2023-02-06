@@ -7,3 +7,9 @@
     font-size:12pt;
     padding-bottom:40px;
 }
+@media (max-width:400px){
+    .subheader-text{
+        
+    }
+    
+}

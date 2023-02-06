@@ -1,3 +1,6 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Josefin+Sans:ital,wght@1,400;1,600&family=Montserrat:wght@400;700&display=swap');
+
 .App {
   margin: 0;
   padding: 0;
@@ -6,6 +9,9 @@
 }
 body{
   background-color: #E58381;
+  /* font-family: 'Cinzel', serif;
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif; */
 }
 
 .Header{
