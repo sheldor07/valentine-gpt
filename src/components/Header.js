@@ -8,6 +8,5 @@ export default function Header(){
                 Generating Love,<br></br>One Word At A Time ❤️
             </div>
             </div>
-        
     )
 }
