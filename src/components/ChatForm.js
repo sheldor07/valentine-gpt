@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import './ChatForm.css'
 import "./ChatOutput.css"
 // import { generatePoem } from "../generate.mjs"
-import { ChatGPTAPI } from 'chatgpt'
 
 export default function ChatForm() {
   const [valentineName, setValentineName] = useState('')
@@ -23,8 +22,22 @@ export default function ChatForm() {
 
   const generate = (valentineName, message) => {
     console.log(`Generating poem for Valentine's Name: ${valentineName} with message: "${message}"`)
+    const data = {
+      name: valentineName,
+      words: message,
+    };
+      
+    const options = {
+      method: 'POST',
+      headers: {
+      'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    };    
+    fetch('https://vev6zo3yfqkqnhk2mkfylof4ea0tulkz.lambda-url.ap-south-1.on.aws/', options)
+    .then(response => response.text())
+    .then(text => console.log(text))
     // var text = generatePoem(valentineName, message)
-    
   }
 
   return (
