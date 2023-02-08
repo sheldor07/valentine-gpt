@@ -17,10 +17,10 @@ export default function ChatForm() {
         console.log(curr_text)
         setPoemText(curr_text + char);
         curr_text += char
-        if (char == '\n') {
+        if (char === '\n') {
             await sleep(2 * sleep_time);
         }
-        if (char != ' ') {
+        if (char !== ' ') {
             await sleep(sleep_time);
         }
     }
