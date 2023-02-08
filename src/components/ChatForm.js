@@ -4,9 +4,30 @@ import "./ChatOutput.css"
 // import { generatePoem } from "../generate.mjs"
 
 export default function ChatForm() {
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+  async function placeholderAnimation(text) {
+    let total_time = 20000;
+    let sleep_time = total_time / text.length;
+
+    // text = "Type it in.\nWe'll write it out.";
+    let curr_text=''
+    for (const char of text) {
+        console.log(curr_text)
+        setPoemText(curr_text + char);
+        curr_text += char
+        if (char == '\n') {
+            await sleep(2 * sleep_time);
+        }
+        if (char != ' ') {
+            await sleep(sleep_time);
+        }
+    }
+}
   const [valentineName, setValentineName] = useState('')
   const [message, setMessage] = useState('')
-
+  let [PoemText,setPoemText] = useState('')
   const handleValentineNameChange = (event) => {
     setValentineName(event.target.value)
   }
@@ -37,10 +58,14 @@ export default function ChatForm() {
     };    
     fetch('https://vev6zo3yfqkqnhk2mkfylof4ea0tulkz.lambda-url.ap-south-1.on.aws/', options)
     .then(response => response.text())
-    .then(text => console.log(text))
+    .then((text) => {console.log(text)
+      placeholderAnimation(text)})
     // var text = generatePoem(valentineName, message)
+    // setPoemText("Hello world")
   }
-
+  // setPoemText = (text)=>{
+  //     PoemText = text;
+  // } 
   return (
     <div className="ChatForm">
       <div className="chat-text">
@@ -61,9 +86,10 @@ export default function ChatForm() {
           value={message}
           onChange={handleMessageChange}
         />
-        <button className="btn-submit">Create my love poem</button>
+        <button className="btn btn-submit">Create my love poem</button>
       </form>
-      <div class="ChatOutput"></div>
+      <div className="ChatOutput"><div className = "poemOutput">{PoemText}</div></div>
+      <button className="btn btn-giftgpt">Unwrap Your Perfect Gift with Gift GPT</button>
     </div>
   )
 }

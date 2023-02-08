@@ -1,14 +1,29 @@
-.header-text{
-    font-size:24pt;
-    font-weight:bold;
+.header-text {
+
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+
+
+    color: #FFFFFF;
+
 }
-.subheader-text{
-    padding-top:25px;
-    font-size:12pt;
-    padding-bottom:40px;
+
+.subheader-text {
+    padding-top: 25px;
+
+    padding-bottom: 40px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+
+    text-align: center;
+
+    color: #FAFAFA;
 }
-@media (max-width:400px){
-    .subheader-text{
-        
-    }
+
+@media (max-width:400px) {
+    .subheader-text {}
 }
