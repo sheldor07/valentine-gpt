@@ -42,7 +42,7 @@ export function PoemGPT() {
             `Generating poem for Valentine's Name: ${valentineName} with message: "${message}"`
         );
         const data = {
-            prompt:`Write a Valentine\'s Day poem for ${valentineName}, incorporating the words ${message} Express your love and affection in four stanzas, using deep language and metaphors in 4 stanzas and then explain the poem in 1 paragraph.`
+            prompt:`Write a Valentine's Day poem for ${valentineName}, incorporating the words ${message} Express your love and affection in four stanzas, using deep language and metaphors in 4 stanzas and then explain the poem in 1 paragraph.`
         };
         const options = {
             method: "POST",

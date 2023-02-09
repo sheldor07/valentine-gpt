@@ -59,10 +59,10 @@ export function LoveOracle() {
         });
     };
     
-    function setQueryTextAndGenerate(text){
-        setQuery(text);
-        // generate(text);
-    }
+    // function setQueryTextAndGenerate(text){
+    //     setQuery(text);
+    //     // generate(text);
+    // }
     return(
         <div className="App">   
             <div className="Header">
