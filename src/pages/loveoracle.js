@@ -142,14 +142,15 @@ export function LoveOracle() {
                 <img id="copyBtn" alt="clipboard-img" src={copyBtn} onClick = {copyDivToClipboard}></img>
                     <div className="poemOutput">{response}</div>
                 </div>
-                <button className="btn btn-giftgpt">
-                    <Link to="/poem-gpt" className="link">
-                        Craft a poem for your Valentine using Poem GPT
-                    </Link>
-                </button>
+                <Link to="/poem-gpt" className="link">
+                    <button className="btn btn-giftgpt">
+                        Need help with your lover first? Ask the AI Love Oracle
+                    </button>     
+                 </Link>
+                
             </div>            
             <div className ="footer">
-                a college.ai product
+                Made with 💙 by Manas and Yajat - a college.ai product
             </div>
         </div>
     )

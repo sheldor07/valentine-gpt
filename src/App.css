@@ -3,16 +3,20 @@
 
 html {
   height: 100%;
+  
 }
 
 .App {
+  
   margin: 0;
   padding: 0;
 }
 body{
   background-color: #E58381;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Nunito';
   background: radial-gradient(50% 50% at 50% 50%, #FF6961 0%, #FF8C86 100%);
+
+  min-height:100vh;
 
   /* font-family: 'Cinzel', serif;
   font-family: 'Josefin Sans', sans-serif;

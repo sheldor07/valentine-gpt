@@ -121,15 +121,14 @@ export function PoemGPT() {
                 <img id="copyBtn" alt="clipboard-img" src={copyBtn} onClick = {copyDivToClipboard}></img>
                 <div className="poemOutput">{PoemText}</div>
                 </div>
-                <button className="btn btn-giftgpt">
                 <Link to="/" className="link">
-                Need help with your lover first? Ask the AI Love Oracle
-                    </Link>
-                    
-                </button>
+                    <button className="btn btn-giftgpt">
+                        Craft a poem for your Valentine using Poem GPT
+                    </button>     
+                 </Link>
             </div>            
             <div className ="footer">
-                a college.ai product
+                Made with 💙 by <a class="link-footer"href="manasbam.com" >Manas</a> and <a class="link-footer" href="github.com/sheldor07" >Yajat</a> - a college.ai product
             </div>
         </div>
     )
