@@ -1,15 +1,16 @@
 
 import './App.css';
-import Header from "./components/Header"
-import ChatForm from "./components/ChatForm"
-import Footer from "./components/Footer"
+import { Route, Routes } from 'react-router-dom';
+import { PoemGPT } from './pages/poemgpt';
+import { LoveOracle } from './pages/loveoracle';
+
 function App() {
   return (
-    <div className="App">
-      <Header/>
-      <ChatForm/>
-      <Footer/>
-    </div>
+
+    <Routes>
+      <Route path="/" element={<LoveOracle/>}/>
+      <Route path="/poem-gpt" element={<PoemGPT/>}/>
+    </Routes>
   );
 }
 
