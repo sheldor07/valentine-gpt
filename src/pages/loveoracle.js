@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import '../styles/loveoracle.css'
 import {Link} from 'react-router-dom'
-
 export function LoveOracle() {
+
     function sleep(ms) {
         return new Promise((resolve) => setTimeout(resolve, ms));
     }
@@ -12,7 +12,6 @@ export function LoveOracle() {
 
         let curr_text = "";
         for (const char of text) {
-            console.log(curr_text);
             setResponse(curr_text + char);
             curr_text += char;
             if (char === "\n") {
@@ -34,9 +33,19 @@ export function LoveOracle() {
         generateQuery(query);
     };
     const generateQuery = (loveQuestion) => {
-        console.log(
-            `Generating advice for love question: ${loveQuestion}`
-        );
+        let btnSubmit = document.getElementById('btnSubmit')
+        console.log("query",loveQuestion)
+        if(loveQuestion===''){
+            return
+        }
+        let spinningContainer = document.createElement('div')
+        let spinningText = document.createElement('i')
+        spinningText.setAttribute('class','fa fa-circle-o-notch fa-spin')
+        spinningContainer.appendChild(spinningText)
+        btnSubmit.innerText=''
+        btnSubmit.appendChild(spinningContainer)
+        btnSubmit.disabled =true
+        console.log( `Generating advice for love question: ${loveQuestion}`);
         const data = {
             prompt:`In the following conversation you are Love Oracle. You will answer all my relationship problems, concerns and issues to the best of your ability. You will provide relevant, personal and emotional advice which should also be in the style of an Oracle. You can explain by analogy, or any other means you see necessary but the advice should be actionable and tangible. You are the Oracle of Love. Begin your responses with Love Oracle.In the following conversation you are Love Oracle. You will answer all my relationship problems, concerns and issues to the best of your ability. You will provide relevant, personal and emotional advice which should also be in the style of an Oracle. You can explain by analogy, or any other means you see necessary but the advice should be actionable and tangible. You are the Oracle of Love. Begin your responses with Love Oracle.In the following conversation you are Love Oracle. You will answer all my relationship problems, concerns and issues to the best of your ability. You will provide relevant, personal and emotional advice which should also be in the style of an Oracle. You can explain by analogy, or any other means you see necessary but the advice should be actionable and tangible. You are the Oracle of Love. Begin your responses with Love Oracle. My question is ${loveQuestion}`
         };
@@ -53,16 +62,30 @@ export function LoveOracle() {
             options
         )
         .then((response) => response.text())
-        .then((text) => {
-            console.log(text);
-            placeholderAnimation(text);
+        .then(async (text) => {
+            await placeholderAnimation(text)
+            btnSubmit.removeChild(spinningContainer)
+            btnSubmit.innerText = "Ask Love Oracle"                 
+            btnSubmit.disabled = false
         });
     };
     
-    // function setQueryTextAndGenerate(text){
-    //     setQuery(text);
-    //     // generate(text);
-    // }
+    const setQueryTextAndGenerate=(event)=>{
+        let btnSubmit = document.getElementById('btnSubmit')
+        console.log(btnSubmit)
+        if(btnSubmit.disabled===false){
+            let text = event.target.innerText
+            setQuery(text)
+            console.log("text type",text)
+            generateQuery(text)
+            event.preventDefault();
+            console.log('busy')
+        }
+        else{
+            console.log('disabled try again later')
+        }
+        
+    }
     return(
         <div className="App">   
             <div className="Header">
@@ -83,25 +106,25 @@ export function LoveOracle() {
                     value={query}
                     onChange={handleQueryChange}
                     />
-                    <button className="btn btn-submit">Ask Love Oracle</button>
+                    <button id="btnSubmit"className="btn btn-submit">Ask Love Oracle</button>
                 </form>
                 <div className="chat-text">
                     or try one of these questions:
                 </div>
                 <div className="suggested-questions">
-                    <div className="suggested-question-text">
+                    <div className="suggested-question-text"onClick={setQueryTextAndGenerate}>
                         overcoming a broken heart?
                     </div>
-                    <div className="suggested-question-text" onClick={()=>{setQuery("conflicts in a relationship?")}}>
+                    <div className="suggested-question-text" onClick={setQueryTextAndGenerate}>
                         conflicts in a relationship?
                     </div>
-                    <div className="suggested-question-text" onClick={()=>{setQuery("tips for a strong relationship?")}}>
+                    <div className="suggested-question-text" onClick={setQueryTextAndGenerate}>
                         tips for a strong relationship?
                     </div>
-                    <div className="suggested-question-text" onClick={()=>{setQuery("challenges of long distance relationships?")}}>
+                    <div className="suggested-question-text" onClick={setQueryTextAndGenerate}>
                         challenges of long distance relationships?
                     </div>
-                    <div className="suggested-question-text" onClick={()=>{setQuery("finding closure after a breakup?")}}>
+                    <div className="suggested-question-text" onClick={setQueryTextAndGenerate}>
                         finding closure after a breakup?
                     </div>
                 </div>
@@ -119,4 +142,5 @@ export function LoveOracle() {
             </div>
         </div>
     )
+    
 }

@@ -101,7 +101,7 @@ form {
 }
 
 .ChatOutput {
-    height: 150px;
+
     overflow: auto;
     margin-top: 20px;
     border-radius: 10px;
@@ -194,3 +194,4 @@ form {
     border-radius: 20px;
     cursor: pointer;
 }
+
