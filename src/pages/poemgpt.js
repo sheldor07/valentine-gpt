@@ -122,7 +122,7 @@ export function PoemGPT() {
                 <div className="poemOutput">{PoemText}</div>
                 </div>
                 <button className="btn btn-giftgpt">
-                <Link to="/poem-gpt" className="link">
+                <Link to="/" className="link">
                 Need help with your lover first? Ask the AI Love Oracle
                     </Link>
                     
