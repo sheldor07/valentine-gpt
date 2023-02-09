@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import '../styles/poemgpt.css'
-
+import copyBtn from '../media/clipboard.png'
+import {Link} from 'react-router-dom'
 export function PoemGPT() {
     function sleep(ms) {
         return new Promise((resolve) => setTimeout(resolve, ms));
@@ -77,6 +78,14 @@ export function PoemGPT() {
             btnSubmit.disabled = false
         });
     };
+    function copyDivToClipboard() {
+        var range = document.createRange();
+        range.selectNode(document.getElementById("ChatOutput"));
+        window.getSelection().removeAllRanges(); // clear current selection
+        window.getSelection().addRange(range); // to select text
+        document.execCommand("copy");
+        window.getSelection().removeAllRanges();// to deselect
+       }
     
     return(
         <div className="App">
@@ -109,10 +118,14 @@ export function PoemGPT() {
                     <button id="btnSubmit"className="btn btn-submit">Create my love poem</button>
                 </form>
                 <div className="ChatOutput" id="ChatOutput">
-                    <div className="poemOutput">{PoemText}</div>
+                <img id="copyBtn" alt="clipboard-img" src={copyBtn} onClick = {copyDivToClipboard}></img>
+                <div className="poemOutput">{PoemText}</div>
                 </div>
                 <button className="btn btn-giftgpt">
-                    Need help with your lover first? Ask the AI Love Oracle
+                <Link to="/poem-gpt" className="link">
+                Need help with your lover first? Ask the AI Love Oracle
+                    </Link>
+                    
                 </button>
             </div>            
             <div className ="footer">
