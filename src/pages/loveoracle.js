@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import '../styles/loveoracle.css'
 import {Link} from 'react-router-dom'
+import copyBtn from '../media/clipboard.png'
 export function LoveOracle() {
 
     function sleep(ms) {
@@ -86,6 +87,15 @@ export function LoveOracle() {
         }
         
     }
+    function copyDivToClipboard() {
+        var range = document.createRange();
+        range.selectNode(document.getElementById("ChatOutput"));
+        window.getSelection().removeAllRanges(); // clear current selection
+        window.getSelection().addRange(range); // to select text
+        document.execCommand("copy");
+        window.getSelection().removeAllRanges();// to deselect
+       }
+    
     return(
         <div className="App">   
             <div className="Header">
@@ -129,6 +139,7 @@ export function LoveOracle() {
                     </div>
                 </div>
                 <div className="ChatOutput">
+                <img id="copyBtn" alt="clipboard-img" src={copyBtn} onClick = {copyDivToClipboard}></img>
                     <div className="poemOutput">{response}</div>
                 </div>
                 <button className="btn btn-giftgpt">

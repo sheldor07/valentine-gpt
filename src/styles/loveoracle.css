@@ -194,3 +194,12 @@ form {
     cursor: pointer;
 }
 
+#copyBtn{
+    padding:5px;
+    height:25px;
+    width:25px;
+    float:right;
+}
+#copyBtn:hover{
+    cursor:pointer;
+}
