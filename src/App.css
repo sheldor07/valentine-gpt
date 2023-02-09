@@ -7,10 +7,11 @@
   padding: 0;
   height:100vh;
   width:100%;
-}
-body{
   background-color: #E58381;
   background: radial-gradient(50% 50% at 50% 50%, #FF6961 0%, #FF8C86 100%);
+}
+body{
+
   font-family: 'Nunito', sans-serif;
 
   /* font-family: 'Cinzel', serif;

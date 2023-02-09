@@ -11,7 +11,7 @@ export function PoemGPT() {
 
         let curr_text = "";
         for (const char of text) {
-            console.log(curr_text);
+           
             setPoemText(curr_text + char);
             curr_text += char;
             if (char === "\n") {
@@ -38,12 +38,25 @@ export function PoemGPT() {
         generatePoem(valentineName, message);
     };
     const generatePoem = (valentineName, message) => {
+        let btnSubmit = document.getElementById('btnSubmit')
+        // console.log("query",message)
+        if(valentineName===''){
+            return
+        }
+        let spinningContainer = document.createElement('div')
+        let spinningText = document.createElement('i')
+        spinningText.setAttribute('class','fa fa-circle-o-notch fa-spin')
+        spinningContainer.appendChild(spinningText)
+        btnSubmit.innerText=''
+        btnSubmit.appendChild(spinningContainer)
+        btnSubmit.disabled =true
         console.log(
             `Generating poem for Valentine's Name: ${valentineName} with message: "${message}"`
         );
         const data = {
-            prompt:`Write a Valentine's Day poem for ${valentineName}, incorporating the words ${message} Express your love and affection in four stanzas, using deep language and metaphors in 4 stanzas and then explain the poem in 1 paragraph.`
+            prompt:(message)?`Write a Valentine's Day poem for ${valentineName}, incorporating the words '${message}'Express your love and affection in four stanzas, using deep language and metaphors in 4 stanzas and then explain the poem in 1 paragraph.`:`Write a Valentine's Day poem for ${valentineName}. Express your love and affection in four stanzas, using deep language and metaphors in 4 stanzas and then explain the poem in 1 paragraph.`
         };
+        // console.log(data.prompt)
         const options = {
             method: "POST",
             headers: {
@@ -57,9 +70,11 @@ export function PoemGPT() {
             options
         )
         .then((response) => response.text())
-        .then((text) => {
-            console.log(text);
-            placeholderAnimation(text);
+        .then(async (text) => {
+            await placeholderAnimation(text)
+            btnSubmit.removeChild(spinningContainer)
+            btnSubmit.innerText = "Create love poem"                 
+            btnSubmit.disabled = false
         });
     };
     
@@ -91,13 +106,13 @@ export function PoemGPT() {
                     value={message}
                     onChange={handleMessageChange}
                     />
-                    <button className="btn btn-submit">Create my love poem</button>
+                    <button id="btnSubmit"className="btn btn-submit">Create my love poem</button>
                 </form>
                 <div className="ChatOutput" id="ChatOutput">
                     <div className="poemOutput">{PoemText}</div>
                 </div>
                 <button className="btn btn-giftgpt">
-                    Unwrap Your Perfect Gift with Gift GPT
+                    Need help with your lover first? Ask the AI Love Oracle
                 </button>
             </div>            
             <div className ="footer">
