@@ -5,7 +5,7 @@
 .App {
   margin: 0;
   padding: 0;
-  height:100vh;
+  height:100%;
   width:100%;
   background-color: #E58381;
   background: radial-gradient(50% 50% at 50% 50%, #FF6961 0%, #FF8C86 100%);
