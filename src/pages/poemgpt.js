@@ -35,17 +35,15 @@ export function PoemGPT() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        generate(valentineName, message);
+        generatePoem(valentineName, message);
     };
-    const generate = (valentineName, message) => {
+    const generatePoem = (valentineName, message) => {
         console.log(
             `Generating poem for Valentine's Name: ${valentineName} with message: "${message}"`
         );
         const data = {
-            name: valentineName,
-            words: message,
+            prompt:`Write a Valentine\'s Day poem for ${valentineName}, incorporating the words ${message} Express your love and affection in four stanzas, using deep language and metaphors in 4 stanzas and then explain the poem in 1 paragraph.`
         };
-
         const options = {
             method: "POST",
             headers: {
@@ -64,6 +62,7 @@ export function PoemGPT() {
             placeholderAnimation(text);
         });
     };
+    
     return(
         <div className="App">
             <div className="Header">

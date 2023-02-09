@@ -31,35 +31,34 @@ export function LoveOracle() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        // generate(valentineName, message);
+        generateQuery(query);
     };
-    // const generate = (valentineName, message) => {
-    //     console.log(
-    //         `Generating poem for Valentine's Name: ${valentineName} with message: "${message}"`
-    //     );
-    //     const data = {
-    //         name: valentineName,
-    //         words: message,
-    //     };
-
-    //     const options = {
-    //         method: "POST",
-    //         headers: {
-    //         "Access-Control-Allow-Origin": "*",
-    //         "Content-Type": "application/json",
-    //         },
-    //         body: JSON.stringify(data),
-    //     };
-    //     fetch(
-    //         "https://vev6zo3yfqkqnhk2mkfylof4ea0tulkz.lambda-url.ap-south-1.on.aws/",
-    //         options
-    //     )
-    //     .then((response) => response.text())
-    //     .then((text) => {
-    //         console.log(text);
-    //         placeholderAnimation(text);
-    //     });
-    // };
+    const generateQuery = (loveQuestion) => {
+        console.log(
+            `Generating advice for love question: "${loveQuestion}"`
+        );
+        const data = {
+            prompt:`In the following conversation you are Love Oracle. You will answer all my relationship problems, concerns and issues to the best of your ability. You will provide relevant, personal and emotional advice which should also be in the style of an Oracle. You can explain by analogy, or any other means you see necessary but the advice should be actionable and tangible. You are the Oracle of Love. Begin your responses with Love Oracle.In the following conversation you are Love Oracle. You will answer all my relationship problems, concerns and issues to the best of your ability. You will provide relevant, personal and emotional advice which should also be in the style of an Oracle. You can explain by analogy, or any other means you see necessary but the advice should be actionable and tangible. You are the Oracle of Love. Begin your responses with Love Oracle.In the following conversation you are Love Oracle. You will answer all my relationship problems, concerns and issues to the best of your ability. You will provide relevant, personal and emotional advice which should also be in the style of an Oracle. You can explain by analogy, or any other means you see necessary but the advice should be actionable and tangible. You are the Oracle of Love. Begin your responses with Love Oracle. My question is ${loveQuestion}`
+        };
+        const options = {
+            method: "POST",
+            headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        };
+        fetch(
+            "https://vev6zo3yfqkqnhk2mkfylof4ea0tulkz.lambda-url.ap-south-1.on.aws/",
+            options
+        )
+        .then((response) => response.text())
+        .then((text) => {
+            console.log(text);
+            placeholderAnimation(text);
+        });
+    };
+    
     function setQueryTextAndGenerate(text){
         setQuery(text);
         // generate(text);
