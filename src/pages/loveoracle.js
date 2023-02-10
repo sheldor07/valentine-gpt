@@ -1,7 +1,7 @@
 // Import modules, css and images
 
 import React, { useState } from "react";
-import "../styles/loveoracle.css";
+import "../styles/styles.css";
 import { Link } from "react-router-dom";
 import copyBtnUnselected from "../media/clipUnselect.svg";
 import copyBtnSelected from "../media/clipSelect.svg";
@@ -130,7 +130,9 @@ export function LoveOracle() {
   return (
     <div className="App">
       <div className="Header">
-        <div className="header-text">Valentine GPT</div>
+        <div className="header-text">
+          Valentine GPT
+        </div>
         <div className="subheader-text">
           Guidance For A Tranquil Heart,<br></br>The Love Oracle Does Impart ❤️
         </div>
@@ -145,7 +147,9 @@ export function LoveOracle() {
             Ask Love Oracle
           </button>
         </form>
-        <div className="chat-text">or try one of these questions:</div>
+        <div className="chat-text">
+          or try one of these questions:
+        </div>
         <div className="suggested-questions">
           <div className="suggested-question-text" onClick={ setQueryTextAndGenerate }>
             overcoming a broken heart?
@@ -175,11 +179,11 @@ export function LoveOracle() {
       </div>
       <div className="footer">
         Made with 💙 by{" "} 
-        <a class="link-footer" href="https://www.manasbam.com" target="_blank" rel="noreferrer">
+        <a className="link-footer" href="https://www.manasbam.com" target="_blank" rel="noreferrer">
           Manas
         </a>
         {" "}and{" "}
-        <a class="link-footer" href="https://www.github.com/sheldor07" target="_blank" rel="noreferrer">
+        <a className="link-footer" href="https://www.github.com/sheldor07" target="_blank" rel="noreferrer">
           Yajat
         </a>
         {" "}- a college.ai product

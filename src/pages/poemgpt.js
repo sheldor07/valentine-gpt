@@ -2,7 +2,7 @@
 
 // Import statements
 import React, { useState } from "react";
-import "../styles/poemgpt.css";
+import "../styles/styles.css";
 import copyBtnUnselected from "../media/clipUnselect.svg";
 import copyBtnSelected from "../media/clipSelect.svg";
 import { Link } from "react-router-dom";
@@ -118,7 +118,9 @@ export function PoemGPT() {
   return (
     <div className="App">
       <div className="Header">
-        <div className="header-text">Valentine GPT</div>
+        <div className="header-text">
+          Valentine GPT
+        </div>
         <div className="subheader-text">
           Generating Love,<br></br>One Word At A Time ❤️
         </div>
@@ -147,11 +149,11 @@ export function PoemGPT() {
       </div>
       <div className="footer">
       Made with 💙 by{" "}
-        <a class="link-footer" href="https://www.manasbam.com" target="_blank" rel="noreferrer">
+        <a className="link-footer" href="https://www.manasbam.com" target="_blank" rel="noreferrer">
           Manas
         </a>
         {" "}and{" "}
-        <a  class="link-footer" href="https://www.github.com/sheldor07" target="_blank" rel="noreferrer">
+        <a  className="link-footer" href="https://www.github.com/sheldor07" target="_blank" rel="noreferrer">
           Yajat
         </a>
         {" "}- a college.ai product

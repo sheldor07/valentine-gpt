@@ -92,18 +92,7 @@ form {
 }
 
 
-@media (max-width:400px) {
-    .ChatForm {
-        margin-left: 10%;
-        margin-right: 10%;
-        text-align: center;
-    }
 
-    .ChatOutput {
-        margin-left: 0%;
-        margin-right: 0%;
-    }
-}
 
 .ChatOutput {
     min-height: 150px;
@@ -124,13 +113,17 @@ form {
     padding: 20px;
 }
 
+@media (max-width:1200px) {
+    .ChatOutput {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
 
-
-.footer {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 12pt;
-    font-weight: bold;
+    .ChatForm {
+        margin-left: 10%;
+        margin-right: 10%;
+        text-align: center;
+    }
 }
 
 .header-text {
@@ -152,6 +145,46 @@ form {
     color: #FAFAFA;
 }
 
+.link {
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.link-footer {
+    text-decoration: none;
+    color: black;
+    text-decoration: underline;
+}
+
+
+.suggested-questions {
+    padding-top: 10px;
+    display: flex;
+    overflow-x: auto;
+    width: 100%;
+}
+
+.suggested-questions::-webkit-scrollbar {
+    display: none;
+}
+
+.suggested-questions {
+    -ms-overflow-style: none;
+}
+
+.suggested-questions {
+    scrollbar-width: none;
+}
+
+.suggested-question-text {
+    margin-right: 15px;
+    white-space: nowrap;
+    background-color: #FF574E;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
 
 #copyBtn {
     padding: 5px;
@@ -164,8 +197,9 @@ form {
     cursor: pointer;
 }
 
-.link-footer {
-    text-decoration: none;
-    color: black;
-    text-decoration: underline;
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12pt;
+    font-weight: bold;
 }
