@@ -112,6 +112,7 @@ export function LoveOracle() {
   };
 
   // Function to copy the chat response to clipboard
+  
   function copyDivToClipboard() {
     // Copy the chat response to clipboard
     navigator.clipboard.writeText(
