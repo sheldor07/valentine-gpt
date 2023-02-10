@@ -176,7 +176,7 @@ export function LoveOracle() {
       </div>
       <div className="footer">
         Made with 💙 by{" "}
-        <a class="link-footer" href="https://www.manasbam.com" target="_blank">
+        <a class="link-footer" href="https://www.manasbam.com" target="_blank" rel="noreferrer">
           Manas
         </a>{" "}
         and{" "}
@@ -184,6 +184,7 @@ export function LoveOracle() {
           class="link-footer"
           href="https://www.github.com/sheldor07"
           target="_blank"
+          rel="noreferrer"
         >
           Yajat
         </a>{" "}
