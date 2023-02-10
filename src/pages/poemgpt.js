@@ -85,7 +85,7 @@ export function PoemGPT() {
         window.getSelection().addRange(range); // to select text
         document.execCommand("copy");
         window.getSelection().removeAllRanges();// to deselect
-       }
+    }
     
     return(
         <div className="App">
