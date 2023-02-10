@@ -112,7 +112,7 @@ form {
     padding: 20px;
 }
 
-@media (max-width:400px) {
+@media (max-width:1200px) {
     .ChatOutput {
         margin-left: 0%;
         margin-right: 0%;
