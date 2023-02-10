@@ -143,12 +143,17 @@ export function PoemGPT() {
         </Link>
       </div>
       <div className="footer">
-        Made with 💙 by{" "}
-        <a class="link-footer" href="manasbam.com">
+      Made with 💙 by{" "}
+        <a class="link-footer" href="https://www.manasbam.com" target="_blank" rel="noreferrer">
           Manas
         </a>{" "}
         and{" "}
-        <a class="link-footer" href="github.com/sheldor07">
+        <a
+          class="link-footer"
+          href="https://www.github.com/sheldor07"
+          target="_blank"
+          rel="noreferrer"
+        >
           Yajat
         </a>{" "}
         - a college.ai product
