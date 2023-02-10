@@ -3,17 +3,6 @@ import "../styles/loveoracle.css";
 import { Link } from "react-router-dom";
 import copyBtnUnselected from "../media/clipUnselect.svg";
 import copyBtnSelected from "../media/clipSelect.svg";
-const {initializeApp, applicationDefault, cert } = require('firebase-admin/app');
-const { getFirestore, Timestamp, FieldValue } = require('firebase-admin/firestore');
-
-
-const serviceAccount = require('../service.json');
-
-initializeApp({
-  credential: cert(serviceAccount)
-});
-
-const db = getFirestore();
 
 export function LoveOracle() {
   function sleep(ms) {
@@ -85,10 +74,6 @@ export function LoveOracle() {
           btnSubmit.disabled = false;
         }
       });
-      const docRef = db.collection('data').doc('count');
-      await docRef.set({
-        total: 100,
-      });  
   };
 
   const setQueryTextAndGenerate = (event) => {
