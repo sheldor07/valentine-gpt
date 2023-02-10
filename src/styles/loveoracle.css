@@ -92,13 +92,7 @@ form {
 }
 
 
-@media (max-width:400px) {
-    .ChatForm {
-        margin-left: 10%;
-        margin-right: 10%;
-        text-align: center;
-    }
-}
+
 
 .ChatOutput {
 
@@ -120,9 +114,16 @@ form {
 
 @media (max-width:400px) {
     .ChatOutput {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    .ChatForm {
         margin-left: 10%;
         margin-right: 10%;
+        text-align: center;
     }
+
 }
 
 
@@ -145,15 +146,13 @@ form {
     text-align: center;
     color: #FAFAFA;
 }
-.link{
+
+.link {
     color: #ffffff;
     text-decoration: none;
     cursor: pointer;
 }
 
-@media (max-width:400px) {
-    .subheader-text {}
-}
 
 .suggested-questions {
     padding-top: 10px;
@@ -162,16 +161,16 @@ form {
     width: 100%;
 }
 
-.suggested-questions::-webkit-scrollbar { 
-    display: none; 
+.suggested-questions::-webkit-scrollbar {
+    display: none;
 }
 
 .suggested-questions {
-    -ms-overflow-style: none; 
+    -ms-overflow-style: none;
 }
 
 .suggested-questions {
-    scrollbar-width: none; 
+    scrollbar-width: none;
 }
 
 .suggested-question-text {
@@ -183,12 +182,13 @@ form {
     cursor: pointer;
 }
 
-#copyBtn{
-    padding:5px;
-    height:25px;
-    width:25px;
-    float:right;
+#copyBtn {
+    padding: 5px;
+    height: 25px;
+    width: 25px;
+    float: right;
 }
-#copyBtn:hover{
-    cursor:pointer;
+
+#copyBtn:hover {
+    cursor: pointer;
 }

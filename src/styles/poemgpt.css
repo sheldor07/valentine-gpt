@@ -98,11 +98,16 @@ form {
         margin-right: 10%;
         text-align: center;
     }
+
+    .ChatOutput {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
 }
 
 .ChatOutput {
-    min-height:150px;
-    overflow:auto;
+    min-height: 150px;
+    overflow: auto;
     margin-top: 20px;
     border-radius: 10px;
     background: #FF6158;
@@ -122,10 +127,10 @@ form {
 
 
 .footer {
-    text-align:center;
-    margin-top:20px;
-    font-size:12pt;
-    font-weight:bold;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12pt;
+    font-weight: bold;
 }
 
 .header-text {
@@ -148,17 +153,19 @@ form {
 }
 
 
-#copyBtn{
-    padding:5px;
-    height:25px;
-    width:25px;
-    float:right;
+#copyBtn {
+    padding: 5px;
+    height: 25px;
+    width: 25px;
+    float: right;
 }
-#copyBtn:hover{
-    cursor:pointer;
+
+#copyBtn:hover {
+    cursor: pointer;
 }
-.link-footer{
+
+.link-footer {
     text-decoration: none;
-    color:black;
-    text-decoration:underline;
+    color: black;
+    text-decoration: underline;
 }
