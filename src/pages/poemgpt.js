@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/poemgpt.css";
-import copyBtnUnselected from "../media/clipSelect.svg";
-import copyBtnSelected from "../media/clipUnselect.svg";
+import copyBtnUnselected from "../media/clipUnselect.svg";
+import copyBtnSelected from "../media/clipSelect.svg";
 import { Link } from "react-router-dom";
 export function PoemGPT() {
   function sleep(ms) {
@@ -56,8 +56,8 @@ export function PoemGPT() {
     );
     const data = {
       prompt: message
-        ? `Write a Valentine's Day poem for ${valentineName}, incorporating the words '${message}'Express your love and affection in four stanzas, using deep language and metaphors in 4 stanzas and then explain the poem in 1 paragraph.`
-        : `Write a Valentine's Day poem for ${valentineName}. Express your love and affection in four stanzas, using deep language and metaphors in 4 stanzas and then explain the poem in 1 paragraph.`,
+        ? `Write a Valentine's Day poem for ${valentineName}, incorporating the words '${message}'Express your love and affection in four stanzas, using deep language and metaphors and then explain the poem in 1 paragraph. Do not use the word stanza in your poem.`
+        : `Write a Valentine's Day poem for ${valentineName}. Express your love and affection in four stanzas, using deep language and metaphors and then explain the poem in 1 paragraph. Do not use the word stanza in your poem.`,
     };
     // console.log(data.prompt)
     const options = {
