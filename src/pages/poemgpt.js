@@ -112,7 +112,7 @@ export function PoemGPT() {
           <input
             className="form-input"
             type="text"
-            placeholder="Valentine's Name: (or let love lead the way and leave it blank ;))"
+            placeholder="Valentine's Name"
             value={valentineName}
             onChange={handleValentineNameChange}
           />
