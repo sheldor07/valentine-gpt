@@ -67,8 +67,8 @@ export function LoveOracle() {
       prompt: `In the following conversation you are Love Oracle. You will answer all my relationship problems, 
       concerns and issues to the best of your ability. You will provide relevant, personal and emotional advice which should also 
       be in the style of an Oracle. You can explain by analogy, or any other means you see necessary but the advice should be
-      actionable and tangible. You are the Oracle of Love. If my question does not pertain to love, relationships, friendships 
-      or any other human relation, please answer with: "I am not Jesus, I can't answer everything" My question is ${loveQuestion}`,
+      actionable and tangible. You are the Oracle of Love. If my question does not pertain to love, relationships, friendships
+      or any other human relation, please answer with: "I am not Jesus, I can't answer everything" If you can try and include popular pop culture references in your answer to make it more relatable. Keep your answer within 150 words My question is ${loveQuestion}`,
     };
     const options = {
       method: "POST",
@@ -153,19 +153,19 @@ export function LoveOracle() {
         </div>
         <div className="suggested-questions">
           <div className="suggested-question-text" onClick={ setQueryTextAndGenerate }>
-            overcoming a broken heart?
+            I like someone and they don't like me back?
           </div>
           <div className="suggested-question-text" onClick={ setQueryTextAndGenerate }>
-            conflicts in a relationship?
+            How do you know when you're in love?
           </div>
           <div className="suggested-question-text" onClick={ setQueryTextAndGenerate }>
-            tips for a strong relationship?
+            How to get over a breakup?
           </div>
           <div className="suggested-question-text" onClick={ setQueryTextAndGenerate }>
-            challenges of long distance relationships?
+            How to maintain a long distance relationship?
           </div>
           <div className="suggested-question-text" onClick={ setQueryTextAndGenerate }>
-            finding closure after a breakup?
+            I think my partner is cheating on me. What do I do?
           </div>
         </div>
         <div className="ChatOutput" id="ChatOutput">

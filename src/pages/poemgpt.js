@@ -70,8 +70,8 @@ export function PoemGPT() {
     const data = {
       // Check if the message is empty
       prompt: message
-        ? `Write a Valentine's Day poem for ${valentineName}, incorporating the words '${message}'Express your love and affection in four stanzas, using deep language and metaphors and then explain the poem in 1 paragraph. Do not use the word stanza in your poem.`
-        : `Write a Valentine's Day poem for ${valentineName}. Express your love and affection in four stanzas, using deep language and metaphors and then explain the poem in 1 paragraph. Do not use the word stanza in your poem.`,
+        ? `Write a Valentine's Day poem for ${valentineName}, incorporating the words '${message}'Express your love and affection in three stanzas, using deep language and metaphors and then explain the poem in 1 paragraph. Do not use the word stanza in your poem.`
+        : `Write a Valentine's Day poem for ${valentineName}. Express your love and affection in three stanzas, using deep language and metaphors and then explain the poem in 1 paragraph. Do not use the word stanza in your poem.`,
     };
     // Send a POST request to the API
     const options = {
