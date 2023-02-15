@@ -137,6 +137,9 @@ export function LoveOracle() {
         <div className="subheader-text">
           Guidance For A Tranquil Heart,<br></br>The Love Oracle Does Impart ❤️
         </div>
+        <div className="count-text">
+          Generated 500,000+ words so far
+        </div>
       </div>
       <div className="ChatForm">
         <div className="chat-text">

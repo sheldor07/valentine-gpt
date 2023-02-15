@@ -124,6 +124,9 @@ export function PoemGPT() {
         <div className="subheader-text">
           Generating Love,<br></br>One Word At A Time ❤️
         </div>
+        <div className="count-text">
+          Generated 500,000+ words so far
+        </div>
       </div>
       <div className="ChatForm">
         <div className="chat-text">

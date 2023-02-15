@@ -136,7 +136,7 @@ form {
 
 .subheader-text {
     padding-top: 25px;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 400;
@@ -144,7 +144,16 @@ form {
     text-align: center;
     color: #FAFAFA;
 }
-
+.count-text{
+    font-weight: bold;
+    padding-bottom: 20px;
+    font-family: 'Nunito';
+    font-style: normal;
+    opacity:0.5;
+    font-size: 16px;
+    text-align: center;
+    color: #FAFAFA;
+}
 .link {
     color: #ffffff;
     text-decoration: none;
